@@ -1,0 +1,3 @@
+"station_id","LocID","id_station","st_name","lat","lon","elev","network","city","county","state","active","fips"
+"30004","375","2375","Golf Club of Georgia","34.09","-84.22","316.69","AEMN","Alpharetta","Fulton","GA","1","13121"
+"30030","370","2370","Cherokee Town and Country Club","33.99","-84.36","319","AEMN","Dunwoody","Fulton","GA","1","13121"
