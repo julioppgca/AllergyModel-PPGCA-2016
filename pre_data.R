@@ -41,7 +41,15 @@ gatherPollen = function(yr, mth) {
 }
 
 
-dt=do.call(rbind,mapply(gatherPollen, yr = rep(2010:2016, each=4), mth=4:7, SIMPLIFY = FALSE))
+if(!file.exists('Data/Pollen.csv')) {
+  dt=do.call(rbind,mapply(gatherPollen, 
+                          yr = rep(2007:2016, each=5), 
+                          mth=3:7, 
+                          SIMPLIFY = FALSE))
+  write.csv(dt, file = 'Data/Pollen.csv', row.names = FALSE)
+} 
+
 
 wthDaily = read.csv('Data/GA_aemn_daily_375.csv')
 wthHourly = read.csv('Data/GA_aemn_daily_375.csv')
+dt = read.csv('Data/Pollen.csv')
